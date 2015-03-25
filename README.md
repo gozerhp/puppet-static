@@ -1,2 +1,5 @@
-# puppet-static
-Creates a module to setup static apache content
+# Generic Set proxy Module
+
+## Overview
+
+Sets proxy settings for generic services.
