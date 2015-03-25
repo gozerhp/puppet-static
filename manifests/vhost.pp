@@ -24,7 +24,7 @@ define static::vhost (
   $docroot       = undef,
   $serveraliases = [],
   $require       = undef,
-  template       = 'static/vhost.erb',
+  $template       = 'static/vhost.erb',
 ) {
 
   apache::vhost { $title:
