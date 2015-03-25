@@ -27,10 +27,10 @@ define static::vhost (
 ) {
 
   apache::vhost { $title:
-    port     => $port,
-    priority => $priority,
-    docroot  => $docroot,
-    template => $template,
+    port          => $port,
+    priority      => $priority,
+    docroot       => $docroot,
+    template      => $template,
     serveraliases => $serveraliases,
   }
 }

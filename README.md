@@ -1,5 +1,5 @@
-# Generic Set proxy Module
+# Module to setup apache vhosts
 
 ## Overview
 
-Sets proxy settings for generic services.
+Installs apache and setups static vhosts depending on needs.
