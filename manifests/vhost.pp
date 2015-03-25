@@ -23,7 +23,6 @@ define static::vhost (
   $priority      = 50,
   $docroot       = undef,
   $serveraliases = [],
-  $require       = undef,
   $template       = 'static/vhost.erb',
 ) {
 
@@ -31,7 +30,6 @@ define static::vhost (
     port     => $port,
     priority => $priority,
     docroot  => $docroot,
-    require  => $docroot,
     template => $template,
     serveraliases => $serveraliases,
   }
