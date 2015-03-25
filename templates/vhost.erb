@@ -1,0 +1,30 @@
+# ************************************
+# Managed by Puppet
+# ************************************
+
+NameVirtualHost <%= @vhost_name %>:<%= @port %>
+<VirtualHost <%= @vhost_name %>:<%= @port %>>
+  ServerName <%= @srvname %>
+<% if @serveraliases.is_a? Array -%>
+<% @serveraliases.each do |name| -%><%= " ServerAlias #{name}\n" %><% end -%>
+<% elsif @serveraliases != '' -%>
+<%= " ServerAlias #{@serveraliases}" %>
+<% end -%>
+  DocumentRoot <%= @docroot %>
+
+  <Directory <%= @docroot %>>
+    Options <%= @options %>
+    AllowOverride None
+<% if @lsbdistcodename == 'precise' -%>
+    Order allow,deny
+    allow from all
+<% else -%>
+    Require all granted
+<% end -%>
+  </Directory>
+
+  ErrorLog /var/log/apache2/<%= @name %>_error.log
+  LogLevel warn
+  CustomLog /var/log/apache2/<%= @name %>_access.log combined
+  ServerSignature Off
+</VirtualHost>
