@@ -18,6 +18,7 @@ class static (
 ) {
 
   include apache
+  include apache::mod::wsgi
 
   if !defined(A2mod['rewrite']) {
     a2mod { 'rewrite':
