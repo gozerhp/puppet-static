@@ -30,7 +30,7 @@
   "description": "Generates a static server and defines virtual hosts.",
   "dependencies": [
     {
-      "name": "puppetlabs/puppetlabs-apache"
+      "name": "puppetlabs/apache"
     }
   ]
 }
